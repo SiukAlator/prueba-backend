@@ -1,5 +1,5 @@
 system-up:
-	docker run -d -p 80:80 tmc-system
+	docker run -it -p 80:80 scraper-system
 
 system-ini:
 	make system-install
@@ -10,7 +10,7 @@ system-reset:
 	make system-up
 
 system-down:
-	docker rm -f tmc-system
+	docker rm -f scraper-system
 
 system-install:
-	docker build -t tmc-system .
+	docker build -t scraper-system .
